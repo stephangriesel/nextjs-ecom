@@ -1,6 +1,12 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import Jumbotron from '../components/Jumbotron';
+import ProductList from '../components/ProductList';
+import Contact from '../components/Contact';
+import basicPicture from '../public/basic.jpg';
+import comfyPicture from '../public/comfy.jpg';
+import luxPicture from '../public/lux.jpg';
 
 export default function Home() {
   return (
@@ -12,9 +18,9 @@ export default function Home() {
       </Head>
 
       <main className='main'>
-        {/* <Jumbotron />
-      <ProductList products={products}/>
-      <Contact/> */}
+        <Jumbotron />
+        <ProductList products={products} />
+        <Contact />
       </main>
 
       <footer className={styles.footer}>
@@ -28,8 +34,8 @@ export const products: IProduct[] = [
   {
     id: 'basic',
     name: 'Basic',
-    price: 25.0,
-    // image: basicPicture,
+    price: 15.0,
+    image: basicPicture,
     description:
       'The basic is the just perfect, nothing more, nothing less for you companion',
     url: '/api/products/basic',
@@ -38,11 +44,20 @@ export const products: IProduct[] = [
   {
     id: 'comfy',
     name: 'Comfy',
-    price: 15.0,
-    // image: comfyPicture,
+    price: 25.0,
+    image: comfyPicture,
     description:
       'Not basic, not too fancy, just comfy. You companion will love this',
     url: '/api/products/comfy',
+  },
+  {
+    id: 'lux',
+    name: 'Luxurious',
+    price: 35.0,
+    image: luxPicture,
+    description:
+      'The ultimate fancy bed for your very luxurious dog. Sleep in style.',
+    url: '/api/products/lux',
   },
 ];
 
