@@ -1,33 +1,14 @@
 @use 'mixins';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 
-* {
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-}
-
-html,
-body {
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-}
-
-.app {
-  min-height: 100vh;
-  min-width: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-.product-list {
-  @include mixins.centered;
+img {
+  width: 20px;
+  border-radius: 20px;
 }
 
 .background-image {
   position: absolute;
   opacity: 0.02;
-  left: 7vw;
+  left: 5vw;
   top: -10vh;
   height: 75vh;
   transform: rotate(20deg);
@@ -56,9 +37,4 @@ body {
     margin: 0;
     color: mixins.$color-purple;
   }
-}
-
-.product__price-button-container {
-  display: flex;
-  grid-area: button;
 }

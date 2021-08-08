@@ -1,19 +1,15 @@
 import Image from 'next/image';
-import dogpaw from '../public/dogpaw.svg';
+import huck from '../public/huck-crop.svg';
+import models from '../public/models.jpeg';
 
 const Jumbotron = () => {
   return (
     <>
       <div className='background-image'>
-        <Image src={dogpaw} alt={dogpaw} />
+        <Image src={huck} alt={huck} />
       </div>
       <div className='promotional-message'>
-        <h3>REDISCOVER</h3>
-        <h2>Dog Bed</h2>
-        <p>
-          An <strong>exclusive collection of beds</strong> available for your
-          companion.
-        </p>
+        <Image width='1000px' height='700px' src={models} alt='model' />
       </div>
     </>
   );

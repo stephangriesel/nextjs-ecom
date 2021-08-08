@@ -1,5 +1,5 @@
-$color-purple: #9094ff;
-$color-light-grey: #ebebeb;
+$color-purple: #9094FF;
+$color-light-grey: #EBEBEB;
 $color-dark: #343434;
 $max-width: 1000px;
 
@@ -14,6 +14,7 @@ $max-width: 1000px;
     padding-right: 20px;
   }
 }
+
 
 @mixin mobile {
   @media (max-width: 600px) {

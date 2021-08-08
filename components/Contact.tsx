@@ -10,7 +10,7 @@ export default function Contact() {
         We are looking forward to hearing from you. Feel free to contact us if
         you have any questions!
       </p>
-      <a href='mailto:support@sleepdoggy.shop'>
+      <a href='mailto:web@sleepydoggy.shop'>
         <button>Contact Us</button>
       </a>
     </div>
