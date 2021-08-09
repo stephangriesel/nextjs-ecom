@@ -1,55 +1,17 @@
 @use 'mixins';
 .product {
-  display: grid;
-  width: 100%;
-
-  grid-template-areas:
-  "title        title         image"
-  "description  description  image"
-  "button       button       image"
-  ".            .            image";
-  grid-template-columns: 1fr 1fr 3fr;
-  margin-bottom: 100px;
-  grid-column-gap: 100px;
-
-  &:nth-of-type(odd) {
-    grid-template-areas:
-    "image title        title"
-    "image description  description"
-    "image button       button"
-    "image .            .";
-    grid-template-columns: 3fr 1fr 1fr;
-
-    @include mixins.mobile {
-      grid-template-areas:
-      "image        image      "
-      "title         title     "
-      "description  description"
-      "button       button     ";
-      grid-template-columns: 1fr 1fr;
-
-      img {
-        height: 300px;
-        max-height: 300px;
-        width: 100%;
-        margin-bottom: 30px;
-      }
-    }
+  display: flex;
+  flex-direction: row;
+  @include mixins.mobile {
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
-    margin: 0;
-    grid-area: title;
-    font-size: 32px;
-    font-weight: bold;
   }
 
   &__description {
-    grid-area: description;
-    line-height: 1.75rem;
-    min-height: 175px;
     @include mixins.mobile {
-      min-height: 0;
     }
   }
 
@@ -58,30 +20,30 @@
     font-size: 28px;
     font-weight: bold;
   }
+  &__img {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__image {
-    grid-area: image;
     width: 100%;
-    max-height: 90%;
+    max-width: 500px;
     object-fit: fill;
     box-shadow: 0 18.025px 43.775px rgba(0, 0, 0, 0.25);
 
     @include mixins.mobile {
-      height: 300px;
-      max-height: 300px;
-      object-fit: contain;
-      width: 100%;
-      margin-bottom: 30px;
     }
   }
 
   &__price-button-container {
     display: flex;
-    grid-area: button;
   }
 
   &__button {
-    margin-left: 30px;
+    // margin-left: 30px;
+    cursor: pointer;
     font-size: 14px;
     font-weight: bold;
     border-radius: 4px;
@@ -115,17 +77,12 @@
   }
   // TODO move mixins in colors
   @include mixins.mobile {
-    grid-template-areas:
-    "image        image      "
-    "title         title     "
-    "description  description"
-    "button       button     ";
-    grid-template-columns: 1fr 1fr;
-
+    &__price-button-container {
+      display: flex;
+      flex-direction: column;
+    }
     .product__image {
-      height: 300px;
-      width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
   }
 }
