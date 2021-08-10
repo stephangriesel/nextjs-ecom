@@ -15,7 +15,7 @@
   }
 
   a > span {
-    color: mixins.$color-purple;
+    color: mixins.$color-blue;
     margin-left: 10px;
   }
 
@@ -29,6 +29,6 @@
   &__title {
     padding: 0;
     font-size: 24px;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 5px;
   }
 }

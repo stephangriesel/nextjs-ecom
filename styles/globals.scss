@@ -22,7 +22,7 @@ body {
 
 .background-image {
   position: absolute;
-  opacity: 0.02;
+  opacity: 0.1;
   left: 7vw;
   top: -10vh;
   height: 75vh;
@@ -50,7 +50,7 @@ body {
       font-size: 50px;
     }
     margin: 0;
-    color: mixins.$color-purple;
+    color: mixins.$color-blue;
   }
 }
 

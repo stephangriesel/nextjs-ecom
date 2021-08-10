@@ -6,7 +6,7 @@ const Jumbotron = () => {
   return (
     <>
       <div className='background-image'>
-        <Image src={huck} alt={huck} />
+        <Image className='bg-image' src={huck} alt={huck} />
       </div>
       <div className='promotional-message'>
         <Image width='1000px' height='700px' src={models} alt='model' />

@@ -2,9 +2,16 @@
 .product {
   display: flex;
   flex-direction: row;
+  margin: 50px 0;
+  &:nth-child(2) {
+    flex-direction: row-reverse;
+  }
   @include mixins.mobile {
     display: flex;
     flex-direction: column;
+    &:nth-child(2) {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -19,6 +26,7 @@
     grid-area: price;
     font-size: 28px;
     font-weight: bold;
+    margin: 10px 0;
   }
   &__img {
     display: flex;
@@ -49,7 +57,7 @@
     border-radius: 4px;
     padding: 6px 20px;
     border: none;
-    background-color: mixins.$color-purple;
+    background-color: mixins.$color-blue;
     color: white;
     position: relative;
 
@@ -63,7 +71,7 @@
     &:before {
       content: ' ';
       position: absolute;
-      background-color: mixins.$color-purple;
+      background-color: mixins.$color-blue;
       top: 0;
       left: 0;
       border-radius: 4px;
