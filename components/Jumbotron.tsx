@@ -1,15 +1,29 @@
-import Image from 'next/image';
-import huck from '../public/huck-crop.svg';
-import models from '../public/models.jpeg';
+import React from 'react';
+import styles from '../styles/Jumbotron.module.scss';
 
-const Jumbotron = () => {
+const Jumbotron = ({videoSource}) => {
   return (
     <>
-      <div className='background-image'>
-        <Image className='bg-image' src={huck} alt={huck} />
-      </div>
-      <div className='promotional-message'>
-        <Image width='1000px' height='700px' src={models} alt='model' />
+      <div className={styles.container}>
+        <video
+          style={{width: `100%`, height: 'auto'}}
+          autoPlay='autoplay'
+          loop='loop'
+          muted
+          id='video-id'
+          className='video'
+        >
+          <source src={videoSource} type='video/mp4' />
+          Your browser does not support the video tag.
+        </video>
+        <div className={styles.layover}>
+          <div className={styles.content}>
+            <div className={styles.contentWrapper}>
+              <h2>SHOP THE LATEST</h2>
+              <button>Shop</button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

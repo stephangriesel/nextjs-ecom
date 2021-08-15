@@ -14,6 +14,10 @@ interface IProductListProps {
 }
 
 export default function Home({products}: IProductListProps) {
+  const videoSource =
+    // 'https://res.cloudinary.com/dvme554nj/video/upload/v1629040414/sleepydoggy/sleep3_mwoygo.mp4';
+    'https://res.cloudinary.com/dvme554nj/video/upload/v1629040633/sleepydoggy/sleep1_ribsey.mp4';
+  // 'https://res.cloudinary.com/dvme554nj/video/upload/v1629040617/sleepydoggy/sleep2_dpq3l4.mp4';
   return (
     <>
       <Head>
@@ -27,7 +31,7 @@ export default function Home({products}: IProductListProps) {
         <link rel='shortcut icon' href='../public/favicon.ico' />
       </Head>
       <main className='main'>
-        <Jumbotron />
+        <Jumbotron blur={2} videoSource={videoSource}></Jumbotron>
         <ProductList products={products} />
         <Contact />
       </main>
