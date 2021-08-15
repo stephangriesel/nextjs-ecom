@@ -3,9 +3,9 @@ import ProductList from '../components/ProductList';
 import Contact from '../components/Contact';
 import Head from 'next/head';
 import {IProduct} from '../components/Product';
-import basicPicture from '../public/basic.jpg';
-import comfyPicture from '../public/comfy.jpg';
-import luxPicture from '../public/lux.jpg';
+import basicPicture from '../public/basic.png';
+import comfyPicture from '../public/comfy.png';
+import luxPicture from '../public/lux.png';
 import {GetStaticProps} from 'next';
 import Jumbotron from '../components/Jumbotron';
 
