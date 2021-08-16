@@ -28,7 +28,7 @@ const Product = (props: IProductProps) => {
           {props.product.description}
         </p>
         <div className={styles.product__price}>
-          ${props.product.price.toFixed(2)}
+          €{props.product.price.toFixed(2)}
         </div>
         <button
           className={`snipcart-add-item ${styles.product__button}`}

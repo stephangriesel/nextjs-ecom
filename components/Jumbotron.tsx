@@ -18,10 +18,9 @@ const Jumbotron = ({videoSource}) => {
         </video>
         <div className={styles.layover}>
           <div className={styles.content}>
-            <div className={styles.contentWrapper}>
-              <h2>SHOP THE LATEST</h2>
-              <button>Shop</button>
-            </div>
+            {/* <div className={styles.contentWrapper}>
+              <h1>SHOP THE LATEST</h1>
+            </div> */}
           </div>
         </div>
       </div>
