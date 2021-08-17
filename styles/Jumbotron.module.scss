@@ -5,6 +5,10 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  video {
+    padding-bottom: 2em;
+  }
   .layover {
     bottom: 50%;
     margin: auto;
